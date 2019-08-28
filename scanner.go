@@ -46,6 +46,7 @@ func (s *scanner) reset() {
 func (s *scanner) nextTag(data []byte) (offset int, err error) {
 
 	for i, c := range data {
+		fmt.Printf("%v", c)
 		switch s.parseState {
 		case stateBegin:
 			switch {
